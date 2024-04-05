@@ -14,7 +14,7 @@ const MainLayout = () => {
   return (
     <Box sx={styles.layout}>
       {header}
-      <Box sx={{ display: 'flex', flexGrow: 1 }}>
+      <Box sx={styles.outlet}>
         <Outlet />
       </Box>
     </Box>
