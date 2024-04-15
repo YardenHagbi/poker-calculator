@@ -6,7 +6,7 @@ import * as styles from './MainLayout.styles';
 const MainLayout = () => {
   const header = (
     <Box sx={styles.header}>
-      <Typography variant='subtitle1'>מחשבון פוקר</Typography>
+      <Typography variant='subtitle1'>מחשבון פוקר - יונה ההומו</Typography>
       <Box component="img" src={pokerChip} sx={styles.headerIcon} />
     </Box>
   );

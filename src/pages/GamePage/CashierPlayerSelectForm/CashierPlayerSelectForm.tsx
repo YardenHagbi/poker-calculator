@@ -3,24 +3,30 @@ import { Player } from '@src/common/models/player.interface';
 
 interface Props {
   players: Player[];
-  onCashierChange: (name: string) => void;
+  onCashierSelect: (name: string) => void;
   cashierName: string;
 }
 
+const placeHolder = 'ללא';
+
 const CashierPlayerSelectForm = (props: Props) => {
-  const { players, onCashierChange, cashierName } = props;
+  const { players, onCashierSelect, cashierName } = props;
 
   return (
-    <FormControl sx={{ width: '15rem' }} disabled={!players.length}>
-      <InputLabel id="cashier-select-label">Select Cashier</InputLabel>
+    <FormControl sx={{ width: '7rem' }} disabled={!players.length}>
+      <InputLabel id="cashier-select-label">דילר</InputLabel>
       <Select
+        autoWidth
         labelId="cashier-select-label"
-        id="cashier-select"
+        label="דילר"
         value={cashierName}
-        label="Select Cashier"
-        onChange={(event) => onCashierChange(event.target.value)}
-        sx={{ mb: 2 }}
+        renderValue={(value) => value || placeHolder}
+        MenuProps={{ sx: { maxHeight: '20rem' } }}
+        onChange={(event) => onCashierSelect(event.target.value)}
       >
+        <MenuItem key="none" value="">
+          {placeHolder}
+        </MenuItem>
         {players.map((player) => (
           <MenuItem key={player.name} value={player.name}>
             {player.name}

@@ -10,16 +10,24 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@fontsource/roboto": "^5.0.12",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+    "@mui/x-data-grid-pro": "^7.2.0",
+    "@mui/x-license-pro": "^6.10.2",
+    "formik": "^2.4.5",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "stylis-plugin-rtl": "^2.1.1",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.0",
     "@types/node": "^20.12.4",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
