@@ -6,11 +6,12 @@ import GamePage from '@src/pages/GamePage/GamePage';
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Navigate to="home" />} />
-        <Route path="home" element={<HomePage />} />
-        <Route path="game" element={<GamePage />} />
+      <Route element={<MainLayout />}>
+        <Route index element={<Navigate to="/home" />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/game" element={<GamePage />} />
       </Route>
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };
