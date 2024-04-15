@@ -1,8 +1,8 @@
-import { DataGridPro, GridCellParams, GridColDef, GridRenderCellParams, GridRowModel } from '@mui/x-data-grid-pro';
+import { Delete } from '@mui/icons-material';
+import { Box, IconButton, Typography } from '@mui/material';
+import { DataGridPro, GridCellParams, GridColDef, GridRenderCellParams } from '@mui/x-data-grid-pro';
 import { Player } from '@src/common/models/player.interface';
 import * as styles from './PlayersTable.styles';
-import { Box, IconButton, Typography } from '@mui/material';
-import { Balance, Delete } from '@mui/icons-material';
 
 interface Props {
   players: Player[];
